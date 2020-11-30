@@ -23,6 +23,7 @@
         width: 400px;
         height: 400px;
         background-color: lightpink;
+        position: relative;
       }
       .box {
         width: 30px;
@@ -36,6 +37,15 @@
         animation-iteration-count: infinite;
         animation-fill-mode: forwards;
         animation-play-state: running;
+      }
+      main::before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 1px;
+        box-shadow: 4px 50px 13px -9px #000000;
+
+        bottom: 30px;
       }
       @keyframes ball {
         0% {
